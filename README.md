@@ -13,7 +13,8 @@
 ### [Теория автоматов и формальных языков](automata_and_formal_language_theory/)
 
 ## Курс 3, семестр 1
-### [Базы данных](database/)
+### [Пакеты научных и инженерных вычислений](scientific_and_engineering_computing_packages/)
+### [Методы реализации СУБД](database/)
 ### [Электронно-вычислительные машины](matlab/)
 ### [Алгоритмы и анализ сложности](algorithm_complexity/)
 ### [Архитектура высокопроизводительных компьютерых систем](high_performance_system_architecture/)
