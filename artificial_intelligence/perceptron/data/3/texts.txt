@@ -1,0 +1,8 @@
+{"name": "Интеграл", "categories": "1 0 0 0 0 0 0 0"}
+{"name": "Разъём", "categories": "0 1 0 0 0 0 0 0"}
+{"name": "Трение", "categories": "0 0 1 0 0 0 0 0"}
+{"name": "Раствор", "categories": "0 0 0 1 0 0 0 0"}
+{"name": "Клетка", "categories": "0 0 0 0 1 0 0 0"}
+{"name": "Код", "categories": "0 0 0 0 0 1 0 0"}
+{"name": "Орфограмма", "categories": "0 0 0 0 0 0 1 0"}
+{"name": "Перевод", "categories": "0 0 0 0 0 0 0 1"}
