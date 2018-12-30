@@ -34,14 +34,10 @@ def split_by_sign(a_list):
 
     return buckets
  
-def radixSort(a_list, base):
+def radixSort(a_list, base=10):
     passes = int(round(log(maxAbs(a_list), base)) + 1) 
     new_list = list(a_list)
     for digit_num in range(passes):
         new_list = merge(split(new_list, base, digit_num))
 
     return merge(split_by_sign(new_list))
-
-
-if __name__ == '__main__':
-	print(radixSort ([1234, 56, 7, 77, 23, 15, 16, 16, 6, 222], 8))
