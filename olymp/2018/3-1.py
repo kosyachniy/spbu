@@ -1,0 +1,1 @@
+print('YNEOS'[abs(sum(map(int, input().split())) % 2)::2])
