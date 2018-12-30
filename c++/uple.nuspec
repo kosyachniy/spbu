@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>uple</id>
+        <version>1.7.1</version>
+        <title>uple</title>
+        <authors>Alexey Poloz</authors>
+        <owners>AlexeyPoloz</owners>
+        <licenseUrl>https://vk.com/freakiller</licenseUrl>
+        <projectUrl>https://vk.com/freakiller</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>SPbU AM-CP Poloz Alexey
+Ваще хз что тут надо писать и делать</description>
+        <summary>Ваще хз что тут надо писать и делать</summary>
+        <releaseNotes>Ваще хз что тут надо писать и делать</releaseNotes>
+        <copyright>PolozAlexey</copyright>
+        <language>ru-RU</language>
+        <tags>c++ AlexeyPoloz</tags>
+    </metadata>
+</package>
