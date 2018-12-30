@@ -1,0 +1,249 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "from random import randint"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Задание 8"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAAGEAAAAVCAYAAABWtYB0AAAABHNCSVQICAgIfAhkiAAAA4NJREFUWIXt2VtoXFUUBuDPELUXpfWaUqkV0ZSAD7ZipSD1Qqt4KSiCD9IHK/pmRUREfXEQxCteUHwQFX3zEltFQQyKoC2mKsQbSqmtiNbGWIsXJG0wxoe1h0xOzjkzzUycQfLDcGCt9a+9zl57r732GebQsXgRI1jY7kD+RzgHE7ixEeNz8Q9uy9FdgQH8iFHswatYU+JvJpz/Gg/iPfwgYjyAIdyDExr0sVFMctlEb8U+HFPP2QB+w/ycQCewH8/iAfRjTCRtY46vmXDagTEM4nkR45P4RMS+F8vq8JeJOftTeRJWJ/3dZc56xeQ8k5EvwTiGcXJGd1FyvKcFnHZhXoH8PhHn0yXcI/AuduNh9UvON/geXVVBV8bghuT05Yx8ebLdIc6KWrwvVsBJLeC0CwcL5K+k55kl3FtwMTbhrwbGegmnYn1VkE3COrF6BzPyXWLLrsaJGd1aHCtWQ7OcTsOG9PyiQN8nytcT+KBBn9vTc32eciH+xpcF5FtFqRoR5ep+sVIOinMkW3JmymknbkcFj+FDUVo+l79ju/Epdpo8Pyvql6NFyebjPGVvUg6UOLhKdA4TNb9duK7FnHZh2NQ430ZPge29omrUdnkVjbWho2msaViTHGTPgyruEDvlUZyOBViFdxLvoRZxOgE9uFqs8p9EzLU4T7xXNv6KxpKwN/Gn4ezk4I0c3YVJtyVHt0DcAcbFRDfD6TQsxyF8VSPrFsn5Gkdn7CsaS8IB0ZhMw9LkYFuO7pGk21zgdEvSX9MkpxMxJOKsNheLTS1ZZb/Hc/x1iXNyd1XQXaPch1+wIodYzXhRS1mVjzXJ6UQsTc/x9DyE5wpsV2GlWMg78VGOzQpxDfisaMB+kcEzMvJrk3wYp2R0l4nMjpp6xZ8JB15IvOuLgmwxekXHkkWXycva9hx9Hirql6NNyebmqqA7Y/CaKA+X4tsaeb/o6deJG99WMbl9uFJk9k782iSHybtL7sE1C7hctM7b8F2KpwcXiPNqGDe1cLxLxK7KO3vBUfhZ3HKzOFL0/YP4Q0zSCN5KjvMwE85Qsj2u9FVah7PwlCgP+0WMv4tvRxUcfxi+Ksp3wiKx+1+v5+iu5GjlYQzeKiwWq6RTW9dmsVnM7fn1DOeJD0xvznZEOdggbtNL2jD2bGO+uHP0N0pYK76lz/2p0zr0iXJ1WnvDmMMcOhX/Atf3Hi4TuGtPAAAAAElFTkSuQmCC\n",
+      "text/latex": [
+       "$$\\left ( 88, \\quad 34\\right )$$"
+      ],
+      "text/plain": [
+       "(88, 34)"
+      ]
+     },
+     "execution_count": 46,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "n = randint(1, 100)\n",
+    "x = randint(1, 100)\n",
+    "\n",
+    "n, x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# k = np.arange(-n, n+1)\n",
+    "# k"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def C(k, n):\n",
+    "    return np.math.factorial(n) / (np.math.factorial(k) * np.math.factorial(n-k))\n",
+    "\n",
+    "# c1 = ((-1)**(n-k))\n",
+    "# c2 = C(np.ones(2*n+1) * n + k, np.ones(2*n+1) * 2*n)\n",
+    "# c3 = (x-k)\n",
+    "\n",
+    "# c1, c2, c3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from sympy import *"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "init_printing()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# n = Symbol('n')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAAEsAAAA4CAYAAAC1+AWFAAAABHNCSVQICAgIfAhkiAAABHpJREFUeJzt21vIFVUUwPHfl5ainyVZiCR2T6MgL1gJZZ/gZ0VFCZVQBEkXwqcQfKiXvqd6iagkMHuwSCy6UlD2JNlFiS6WICYlnhQhy6KyQO3y9bDmNNM4R8/Vc9T5w3DO7D177X3WrL1m7bXnUHLUGMI2vITxuA6bsAFXdm9Yvcd8rEA/lmEdvsLFOAcfoK9bg+s1lmFO5vxj3JM5X4kzj+qIOsxJLbTdJqYdXINRWIpJGItp+Kml0R1H9IlpuBOfiql3F3ZhBxZ2bWQlJSUlJSWNUG/QOBNr2tDfAvH0PCYZWed1YzC1Df2d0gYZXaPeoPRAR0dxHPIkhpPjH9zR3eH0Nn1YLVXYQVzb1RH1OCdjrVRhv+Pyro6oxxmDjVKF7RWL5pIanI4tUoXtxOSujqjHOQvfSRW2RSixpAZT8aNUYRvFNC2pwWzskyrsXfUHuyckgyJwrSrsRa3l32/FcnyI3xKZq+tsOxF/J+1bpZIcbed2Mciqwp5oQdaXiYx92KoxZd2fXD+vhf6rVHRIWeOwXaqszRjdpKx5uFBY54DGlLVWhDMjmuw7S0UHlDUS70kVtUs8LdvBgPqVdapwB6ty5YOJjMdwqcig7BFB9QZcUUNeRUZZrezuZFkpXfr8iuuxu02yG+FGkdl4M1c+I/m8SGyu9OMFrBfbeW+LmdFxhqQWdUBYQjsZUL9lvSqsJT/9X05k/CByc1leT+quLpBX0UbLWoxHku/DuBvvtyizWUaLfcy12J+rq1rWYnyRq9uaad8xFuBPqVUt61A/A+qzrJuS6/Kpo36RUqooDmfWJO3OK6iraIODny6Nf4bxdKsCD8OA+pS1SriB03LlVyXtn6vR7mv8oliRFS1OwykiSq86xDfwYBNy2skIYVnrxAMmS9VHfV7Qbpxw+puEQg9Lo8uS8UJRk5LzDbhTmHk3mYsJDn0Kkvqrz2rU9SlWJPFKwn80YlnVR/Ilyfk2cTfzzrQbLBQ37K2Cupkiq7u5oG5W8pl3+lWmaSJX1yd1hMP4Huc2KqQBbsHzyVENdrdnyh7PjW0nPiqQM0o8hGpZTjVNXmvnqvp7G+KhTMNWjqE6+xs6gpxK5trZSdnSAjmzkrpna/SzVaw/ay36m1JWNag7WspqhEcT2Z20dNTv4HcLH9Uqe9sgI89C8Xrmjg7ILikpKSlpkCXCIe8XMVBReqQEi0SgeJ/4g8FykYOa0s1BNcpkEa/cLKLmP0TU3I7Ef5ZPHJoB+EakfI8ZbhDKWi/+anKBWGttKrj2YWENhzuKptYp+Au35cqfSfrtabJBaTVHtUis/eA1xXd8BV45guyiHPwZIp2yJ1e+R9ygniarrMvwjlRRhHV9W9Du5+Q4ocimaKaLdxWyzBAbnnmanYZ7xUbsxFz5RP+/ST1J1bLG4nyH+qcZIhOap9lpeFCECoNiJ6bKoNhlOSaYI+54f6ZsgnD409vc1yKhtHtF6PCUsMSz29xPx3hAJO6zzBc/qhOvYy8ROakDwtLmdqCPkpKSkhOafwFteET9DH+bPQAAAABJRU5ErkJggg==\n",
+      "text/latex": [
+       "$$\\sum_{n=0}^{\\infty} \\frac{1}{n!}$$"
+      ],
+      "text/plain": [
+       "  ∞     \n",
+       " ____   \n",
+       " ╲      \n",
+       "  ╲   1 \n",
+       "   ╲  ──\n",
+       "   ╱  n!\n",
+       "  ╱     \n",
+       " ╱      \n",
+       " ‾‾‾‾   \n",
+       "n = 0   "
+      ]
+     },
+     "execution_count": 44,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# x = Sum(1/factorial(n), (n, 0, oo))\n",
+    "# x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAAA4AAAAPCAYAAADUFP50AAAABHNCSVQICAgIfAhkiAAAAM1JREFUKJHN0jFKg0EQBeDvNwY8QDrBA0i6IGnsIjlAPIGNXS6QKp2thRAsU9lY2IiNTQoPEK3EC4hYWySQWPwjLH+yRIKFD5aBefPezO4sf4xTPOATM7xhgFpOUMMNllE8wiVeIzfOCa+i4AK7Sb6Op+AOq6I2FrjLmJ6H8EzFtY8CXxiuETYj7lSJj3DcdE5S0V4kJ5kxV/DTtojY+K0wxTS69jL8sWSPRUJ0ca98sEc8x0T7aClXcpDreoRbvGOu/DkvuEZnm2v8A3wDpcQrBIjY5EQAAAAASUVORK5CYII=\n",
+      "text/latex": [
+       "$$e$$"
+      ],
+      "text/plain": [
+       "ℯ"
+      ]
+     },
+     "execution_count": 45,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# x.doit()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 57,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "image/png": "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\n",
+      "text/latex": [
+       "$$\\sum_{k=-88}^{88} \\frac{\\left(-1\\right)^{- k + 88}}{\\left(- k + 34\\right) \\left(k + 88\\right)!}$$"
+      ],
+      "text/plain": [
+       "   88                      \n",
+       "  ____                     \n",
+       "  ╲                        \n",
+       "   ╲            -k + 88    \n",
+       "    ╲       (-1)           \n",
+       "    ╱   ───────────────────\n",
+       "   ╱    (-k + 34)⋅(k + 88)!\n",
+       "  ╱                        \n",
+       "  ‾‾‾‾                     \n",
+       "k = -88                    "
+      ]
+     },
+     "execution_count": 57,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "k = Symbol('k')\n",
+    "\n",
+    "l = ((-1)**(n-k)) * (factorial(2*n) / (factorial(n+k) * factorial(2*n))) / (x-k)\n",
+    "a = Sum(l, (k, -n, n))\n",
+    "\n",
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "image/png": "iVBORw0KGgoAAAANSUhEUgAAABEAAAAQCAYAAADwMZRfAAAABHNCSVQICAgIfAhkiAAAAQpJREFUOI3F07ErRVEcB/CP9zaUKFmkDAY9YnhlI0/5E97ybDbFZLeZLBaZlJJFySabkuFhUSahlKIoJT0peYZzh9vtXq4MvtP5fvt9v53zPecU/YxezKITVyhgKVq/5PAr4BIXeMMuFtFEX54AGIoMXRjDfcS38wZAO8ox3oYBtPwm5H8xg1uhyC20RvokzvCMfd8UO4wnVDGNaxyghAbWMYFVnMroZgMLMV7COx6wk5ito5IWcoKRhLaGD/Qn9BXMEx5TEs0Ev0ER3SlzqcfZxFyMd+AOjzhMmOqYSgsZjQxVjOMIx0LhDaGzMpZxnrUTqAlX/Io99ER6Rfh0n0J3g1kBeZDW49/xBZPnNhWQfUyTAAAAAElFTkSuQmCC\n",
+      "text/latex": [
+       "$$\\tilde{\\infty}$$"
+      ],
+      "text/plain": [
+       "zoo"
+      ]
+     },
+     "execution_count": 58,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.doit()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.0"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
