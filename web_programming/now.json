@@ -1,0 +1,13 @@
+{
+	"version": 2,
+	"name": "exchanger",
+	"builds": [
+		{"src": "**/*.py", "use": "@liudonghua123/now-flask", "config": {"maxLambdaSize": "30mb"}},
+		{"src": "static/*", "use": "@now/static"},
+		{"src": "db/*", "use": "@now/static"}
+	],
+	"routes": [
+		{"src": "/static/(.*)", "dest": "/static/$1"},
+		{"src": "/.*", "dest": "/"}
+	]
+}

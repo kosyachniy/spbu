@@ -1,0 +1,41 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<link rel="shortcut icon" type="image/png" href="/static/jasmine/lib/jasmine-3.3.0/jasmine_favicon.png">
+	<link rel="stylesheet" type="text/css" href="/static/jasmine/lib/jasmine-3.3.0/jasmine.css">
+
+	<script type="text/javascript" src="/static/jasmine/lib/jasmine-3.3.0/jasmine.js"></script>
+	<script type="text/javascript" src="/static/jasmine/lib/jasmine-3.3.0/jasmine-html.js"></script>
+	<script type="text/javascript" src="/static/jasmine/lib/jasmine-3.3.0/boot.js"></script>
+</head>
+<body>
+	<div id="gen" style="display: none;"></div>
+	<script type="text/javascript" src="/static/check_card.js"></script>
+	<script>
+		generate_form();
+
+		(function() {
+
+		  describe("Test Card number", function() {
+		    return it("has expectations", function() {
+		      return expect(test('12345')).toBeFalsy();
+		    });
+		  });
+
+		  describe("Test Card number", function() {
+		    return it("has expectations", function() {
+		      return expect(test('1234123412341234')).toBeTruthy();
+		    });
+		  });
+
+		  describe("Test Card number", function() {
+		    return it("has expectations", function() {
+		      return expect(test('123412341234123h')).toBeFalsy();
+		    });
+		  });
+
+		}).call(this);
+	</script>
+</body>
+</html>

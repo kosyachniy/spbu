@@ -1,0 +1,32 @@
+body{
+    background-color: #e9ecef;
+    font-family: 'Exo 2', sans-serif;
+    background-image: url(fon.jpg);
+}
+
+.kek{
+    background-color: #e9ecef;
+}
+
+.ee3, .ee4{
+    background-color: white;
+}
+
+.row > div {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.main-form {
+    width: 60%;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.main-form input {
+    width: 100% !important;
+    display: block;
+}
+.card{
+    margin-top:20px;
+}

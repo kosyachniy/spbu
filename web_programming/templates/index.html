@@ -1,0 +1,70 @@
+{% extends "main.html" %}
+
+{% block cont %}
+<div id="gen"></div>
+
+<div id="testing"></div>
+
+<script type="text/javascript" src="/static/check_card.js"></script>
+<script>
+    generate_form();
+
+    // Получать актуальный курс
+
+    var course = 252032;
+
+    const Http = new XMLHttpRequest();
+    const url = 'https://blockchain.info/ru/ticker';
+    Http.open("GET", url);
+    Http.send();
+    Http.onreadystatechange=(e)=>{
+        var res = Http.responseText;
+        if (res) {
+            course = JSON.parse(res).RUB.last * 1.07;
+            $('.main-form').attr('action', '/sys_change/?ref={{ referal }}&cur=' + course);
+            $('input[name="count"]').attr('placeholder', 'Сумма в BTC (курс ' + Math.round(course) + ' ₽/Ƀ)');
+        }
+    }
+
+    // Рассчёт перевода
+
+    $('input[name="count"]').on('input keyup', function(el) {
+        var count = $(this).val();
+        count = count.replace(',', '.');
+        count *= course;
+
+        var com = Math.round(20 + count * 0.01);
+        
+        if (count >= com) {
+            count -= 20;
+        } else {
+            com = 0;
+        }
+
+        count = Math.round(count, 0);
+
+        $('.ee1').html(count);
+        $('.ee2').html(com);
+    });
+
+
+
+//     (function() {
+//   'use strict';
+//   window.addEventListener('load', function() {
+//     // Fetch all the forms we want to apply custom Bootstrap validation styles to
+//     var forms = document.getElementsByClassName('needs-validation');
+//     // Loop over them and prevent submission
+//     var validation = Array.prototype.filter.call(forms, function(form) {
+//       form.addEventListener('submit', function(event) {
+//         if (form.checkValidity() === false) {
+//           event.preventDefault();
+//           event.stopPropagation();
+//         }
+//         form.classList.add('was-validated');
+//       }, false);
+//     });
+//   }, false);
+// })();
+</script>
+{% endblock %}

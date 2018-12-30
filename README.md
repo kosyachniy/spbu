@@ -15,6 +15,7 @@
 ## Курс 3, семестр 1
 ### [Пакеты научных и инженерных вычислений](scientific_and_engineering_computing_packages/)
 ### [Методы реализации СУБД](database/)
+### [Технологии Интернет и WEB-программирования](web_programming/)
 ### [Электронно-вычислительные машины](matlab/)
 ### [Алгоритмы и анализ сложности](algorithm_complexity/)
 ### [Архитектура высокопроизводительных компьютерых систем](high_performance_system_architecture/)
