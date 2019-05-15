@@ -1,9 +1,20 @@
+# Кэш
+
 **/__pycache__/
-**/*.pyc
+*.pyc
 
-**/flask/
+.ipynb_checkpoints/
 
-**/keys.txt
+.DS_Store
 
-artificial_intelligence/strings/text.txt
-artificial_intelligence/strings/cont.txt
+# Виртуальное окружение
+
+flask/
+env/
+
+# Ключи
+
+keys.txt
+keys.js
+keys.py
+keys.json
