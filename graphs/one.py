@@ -1,7 +1,7 @@
 import networkx as nx
 import csv
 
-from func import G
+from func import G, conn_weak, conn_strong
 
 
 # Матрица смежности
@@ -10,14 +10,7 @@ nx.to_pandas_adjacency(G).to_csv('contig_matrix.csv')
 
 # Список смежности
 
-# conn = {i: [j[1] for j in G.edges() if j[0] == i] for i in G}
-conn_weak = {i: [list(set(j)-{i})[0] for j in G.edges() if i in j] for i in G}
-
-conn_strong = {i: list(G.neighbors(i)) for i in G}
 contig_list = ((i, *conn_strong[i]) for i in conn_strong)
-
-# print(conn_weak)
-# print(conn_strong)
 
 with open('contig_list.csv', 'w') as file:
 	for i in contig_list:
