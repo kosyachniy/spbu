@@ -230,6 +230,12 @@ for i in normalized_shortest_path_edge_membership_count:
 print('-' * 100)
 print('Метрика Edge betweeness:', centrality_betweenes)
 
-x = [centrality_betweenes[i] for i in nodes]
-nx.draw(G, pos=None, node_size=100, node_color=x)
+# Если вдруг что, смотри предыдущую версию файла !!!
+
+x = [centrality_betweenes[i, j] for i, j in G.edges()]
+print(*[(i, j, centrality_betweenes[i, j]) for i, j in G.edges()], sep='\n')
+x = [i if type(i) != dict else 0 for i in x]
+# print(max(x))
+
+nx.draw(G, pos=None, node_size=100, edge_color=x)
 plt.show()

@@ -10,7 +10,8 @@ import networkx as nx
 # G.add_edge('1', '3')
 # G.add_edge('3', '5')
 
-G = nx.read_gexf('vk-friends-140420515.gexf')
+# Если вдруг что, смотри предыдущую версию файла !!!
+G = nx.read_gexf('lm.gexf') # ('vk-friends-140420515.gexf')
 
 
 conn_weak = {i: [list(set(j)-{i})[0] for j in G.edges() if i in j] for i in G}
