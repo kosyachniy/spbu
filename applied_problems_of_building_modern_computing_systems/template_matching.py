@@ -40,13 +40,13 @@ def process_entity(ex_count, temp_count, ex_folder, temp_folder, file):
     ]
 
     templates = [
-        os.path.join(temp_folder, f'{i}.png')
+        os.path.join(temp_folder, '{}.png'.format(i))
         for i in range(1, temp_count + 1)
     ]
 
     for template in templates:
         for image in images:
-            print(f'finding {template} in {image}')
+            print('{} → {}'.format(template, image))
             template_matching(template, image)
 
 
