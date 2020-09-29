@@ -16,7 +16,7 @@
 ### [Пакеты научных и инженерных вычислений](scientific_and_engineering_computing_packages/)
 ### [Методы реализации СУБД](database/)
 ### [Технологии Интернет и WEB-программирования](web_programming/)
-### [Электронно-вычислительные машины](matlab/)
+### [Электронно-вычислительные машины (Matlab)](matlab/)
 ### [Алгоритмы и анализ сложности](algorithm_complexity/)
 ### [Архитектура высокопроизводительных компьютерых систем](high_performance_system_architecture/)
 
@@ -26,8 +26,11 @@
 
 ## Курс 4, семестр 1
 ### [Интеллектуальные системы](intelligent_systems/)
-### [Grid & Cloud: Экзамен](grid_and_cloud/exam/)
+### [Grid & Cloud: Проект](https://github.com/kosyachniy/gridandcloud)
 
 ## Курс 4, семестр 2
-### [Grid & Cloud: Доклады (Смартконтракты)](grid_and_cloud/reports/)
+### [Grid & Cloud: Доклады (Смартконтракты)](smartcontracts/)
 ### [Прикладные задачи построения современных вычислительных систем (Биометрия)](applied_problems_of_building_modern_computing_systems/)
+
+## Диплом (ВКР)
+### [Методы анализа пользовательских дискуссий в сети Web 2.0 на примере Telegram](https://github.com/kosyachniy/tg)
