@@ -22,10 +22,12 @@
 
 ## Курс 3, семестр 2
 ### [Теория конечных графов](graphs/)
-### [Электронно-вычислительные машины](simulink/)
+### [Электронно-вычислительные машины (Simulink)](simulink/)
 
 ## Курс 4, семестр 1
 ### [Интеллектуальные системы](intelligent_systems/)
+### [Grid & Cloud: Экзамен](grid_and_cloud/exam/)
 
 ## Курс 4, семестр 2
-### [Прикладные задачи построения современных вычислительных систем](applied_problems_of_building_modern_computing_systems/)
+### [Grid & Cloud: Доклады (Смартконтракты)](grid_and_cloud/reports/)
+### [Прикладные задачи построения современных вычислительных систем (Биометрия)](applied_problems_of_building_modern_computing_systems/)
