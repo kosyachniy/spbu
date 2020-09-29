@@ -30,6 +30,7 @@
 
 ## Курс 4, семестр 2
 ### [Grid & Cloud: Доклады (Смартконтракты)](smartcontracts/)
+### [Grid & Cloud: Проект](grid_and_cloud/)
 ### [Прикладные задачи построения современных вычислительных систем (Биометрия)](applied_problems_of_building_modern_computing_systems/)
 
 ## Диплом (ВКР)

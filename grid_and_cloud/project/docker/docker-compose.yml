@@ -1,0 +1,60 @@
+version: "3"
+services:
+  db:
+    image: "mongo:4.0.8"
+    container_name: "db"
+    ports:
+      - "27017:27017"
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      MONGO_INITDB_DATABASE: admin
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_LOGIN}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+    volumes:
+      - "../data/db:/data/db"
+      - "../data/logs:/data/logs"
+    command: --logpath /data/logs/mongodb.log
+
+  api:
+    build:
+      dockerfile: ../docker/api/Dockerfile
+      context: ../api
+      args:
+        - SERVER=${SERVER}
+    depends_on:
+      - db
+    container_name: "api"
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - "../data/load:/data/load"
+      - "../api/app:/app"
+      - "../api/api:/api"
+    ports:
+      - "5000:5000"
+
+  web:
+    build:
+      dockerfile: ../docker/web/Dockerfile
+      context: ../web
+    container_name: "web"
+    depends_on:
+      - server
+    volumes:
+      - "../web/public:/public"
+      - "../web/src:/src"
+    ports:
+      - "3000:3000"
+
+  server:
+    image: "nginx"
+    container_name: "server"
+    volumes:
+      - "../docker/server/nginx.conf:/etc/nginx/nginx.conf"
+      - "../data/load:/load"
+      - "../data/logs:/data/logs"
+    depends_on:
+      - api
+    ports:
+      - '80:80'

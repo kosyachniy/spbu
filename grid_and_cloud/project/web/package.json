@@ -1,0 +1,38 @@
+{
+	"name": "web",
+	"author": "kosyachniy",
+	"version": "0.1.0",
+	"dependencies": {
+		"@ckeditor/ckeditor5-react": "^1.1.1",
+		"@kosyachniy/ckeditor": "^1.0.1",
+		"axios": "^0.18.0",
+		"i18next": "^17.2.0",
+		"i18next-xhr-backend": "^3.1.2",
+		"react": "^16.8.4",
+		"react-dom": "^16.8.4",
+		"react-google-maps": "^9.4.5",
+		"react-html-parser": "^2.0.2",
+		"react-i18next": "^10.13.1",
+		"react-mathjax-preview": "^0.1.16",
+		"react-redux": "^7.1.3",
+		"react-router-dom": "^5.0.0",
+		"react-scripts": "2.1.8",
+		"redux": "^4.0.5",
+		"socket.io-client": "^2.3.0"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	]
+}
